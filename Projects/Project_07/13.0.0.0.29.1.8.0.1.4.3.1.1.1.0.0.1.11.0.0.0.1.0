@@ -1,0 +1,1322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>COMP 1210 (1210-Spring-2017): Project 7 Completed Code (max of 10 submits) try #7 (77.7/100.0)</title>
+<script type="text/javascript" src="http://webcat.eng.auburn.edu:8080/Web-CAT/Ajax.framework/WebServerResources/jsonrpc.js?20100927"></script>
+<link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/dojo/resources/dojo.css?20140708" />
+<link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/dijit/themes/aristo/aristo.css?20140708" />
+<link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/dojox/form/resources/FileInput.css?20140708" />
+<link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/webcat/themes/webcat.css?20140708" />
+<link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/base/layout.css?20140708" media="screen, projection, tv" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/base/typography.css?20140708" media="screen, projection, tv" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/base/fonts.css?20140708" media="print, screen, projection, tv" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/base/code.css?20140708" media="print, screen, projection, tv" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/base/print.css?20140708" media="print" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/base/dojo.css?20140708" media="screen, projection, tv" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/base/sprites.css?20140708" media="screen, projection, tv" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/aristo/aristo.css?20140708" media="screen, projection, tv" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/dream-way/dojo-overrides.css?20140708" media="screen, projection, tv" /><link rel="stylesheet" type="text/css" href="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/theme/dream-way/dream-way.css?20140708" media="screen, projection, tv" />
+
+<script type="text/javascript">
+djConfig = { parseOnLoad: true, baseUrl: "http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/", modulePaths: { "dojo": "dojo", "dijit": "dijit", "dojox": "dojox", "webcat": "webcat" } };
+</script>
+<script type="text/javascript" src="http://webcat.eng.auburn.edu:8080/Web-CAT/Core.framework/WebServerResources/dojo/dojo.xd.js?20140708"></script>
+<script type="text/javascript">
+dojo.require("webcat.BasePage");
+// <!-- END_REQUIRES -->
+dojo.addOnLoad(function() {
+    dijit.setWaiRole(dojo.body(), "application");
+// <!-- END_ON_LOAD -->
+});
+</script>
+</head>
+<body class="aristo">
+<div id="content">
+<div id="header">
+  <div class="title width25 floatLeft">
+    <h1>Web-CAT</h1>
+    <h2>Automatic grading<br/>using student-written tests</h2>
+  </div>
+
+  <div id="utils">
+    <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.1">Austin Hall</a> |
+    <a href="http://web-cat.org/Web-CAT.help/grader/SubmissionFileDetailsPage.php?t1=2&t2=0&ua=0">help</a> |
+    <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.5">feedback</a> |
+    <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.7">logout</a>
+  </div>
+
+  
+
+  <div id="mainMenudiv">
+    <ul id="mainMenu" class="floatRight">
+      
+        <li>
+          <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.0.1.0.1">Home  &#187;</a>
+          
+            <ul>
+              <li class="here">
+                <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.0.1.0.3.1.0.1.0.1">Status</a>
+              </li>
+            
+              <li>
+                <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.0.1.0.3.1.1.1.0.1">My Profile</a>
+              </li>
+            
+              <li>
+                <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.0.1.0.3.1.2.1.0.1">Feedback</a>
+              </li>
+            </ul>
+          
+        </li>
+      
+        <li>
+          <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.1.1.0.1">Submit</a>
+          
+        </li>
+      
+        <li class="here">
+          <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.2.1.0.1">Results  &#187;</a>
+          
+            <ul>
+              <li class="here">
+                <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.2.1.0.3.1.0.1.0.1">Most Recent</a>
+              </li>
+            
+              <li>
+                <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.2.1.0.3.1.1.1.0.1">Past Results</a>
+              </li>
+            
+              <li>
+                <a href="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.1.11.2.1.0.3.1.2.1.0.1">Graphs</a>
+              </li>
+            </ul>
+          
+        </li>
+      
+    </ul>
+  </div>
+</div>
+<div id="page"><div class="width100 floatRight">
+<div class="module title">
+  
+  <h1>COMP 1210 (1210-Spring-2017): Project 7 Completed Code (max of 10 submits) try #7 (77.7/100.0)</h1></div>
+<div dojoType="webcat.ContentPane" id="error-panel" href="/Web-CAT/WebObjects/Web-CAT.woa/ajax/24.0.0.0.29.1.5"></div>
+<div class="module">
+<div dojoType="webcat.TitlePane" showsLoadingMessageOnRefresh="true" open="true" id="_0_0_0_29_1_6_1" title="Dodecahedron.java" href="/Web-CAT/WebObjects/Web-CAT.woa/ajax/24.0.0.0.29.1.6.1.1.1">
+
+<form name="f_0_0_0_29_1_6_1_1_1_0_0_1_1" method="post" action="/Web-CAT/WebObjects/Web-CAT.woa/wo/24.0.0.0.29.1.6.1.1.1.0.0.1.1" dojoType="webcat.Form" jsId="form_f_0_0_0_29_1_6_1_1_1_0_0_1_1"><script type="text/javascript">
+dojo.addOnLoad(function() {
+    validationResults_f_0_0_0_29_1_6_1_1_1_0_0_1_1 = new webcat.ValidationResults();
+});
+</script>
+View: <select name="0.0.0.29.1.6.1.1.1.0.0.1.1.1"><option value="WONoSelectionString">Overall summary of results</option><option value="0">Dodecahedron.java</option><option value="1">DodecahedronList2.java</option><option value="2">DodecahedronList2Test.java</option><option value="3">DodecahedronTest.java</option></select>
+  <button dojoType="dijit.form.Button" type="submit" name="0.0.0.29.1.6.1.1.1.0.0.1.1.3" label="Go" value="Go"></button></form>
+<TABLE cellspacing="0" cellpadding="0" class="srcView" bgcolor="white" id="bigtab">
+<TBODY id="tab"><tr id="O:1">
+    <td align="right" class="lineCount" id="O:1"> 1</td>
+    <td align="right" class="lineCount" id="O:1">  </td>
+    <td class="srcLine" id="O:1">
+        <pre class="srcLine" id="O:1"> </pre>
+    </td>
+</tr>
+<tr id="O:2">
+    <td align="right" class="lineCount" id="O:2"> 2</td>
+    <td align="right" class="lineCount" id="O:2">  </td>
+    <td class="srcLine" id="O:2">
+        <pre class="srcLine" id="O:2"> <span class="keyword" id="O:2">import</span> java.text.DecimalFormat;</pre>
+    </td>
+</tr>
+<tr id="O:3">
+    <td align="right" class="lineCount" id="O:3"> 3</td>
+    <td align="right" class="lineCount" id="O:3">  </td>
+    <td class="srcLine" id="O:3">
+        <pre class="srcLine" id="O:3"> <span class="comment" id="O:3">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:4">
+    <td align="right" class="lineCount" id="O:4"> 4</td>
+    <td align="right" class="lineCount" id="O:4">  </td>
+    <td class="srcLine" id="O:4">
+        <pre class="srcLine" id="O:4"> <span class="comment" id="O:4"> * This class is used to create new objects.</span></pre>
+    </td>
+</tr>
+<tr id="O:5">
+    <td align="right" class="lineCount" id="O:5"> 5</td>
+    <td align="right" class="lineCount" id="O:5">  </td>
+    <td class="srcLine" id="O:5">
+        <pre class="srcLine" id="O:5"> <span class="comment" id="O:5"> *</span></pre>
+    </td>
+</tr>
+<tr id="O:6">
+    <td align="right" class="lineCount" id="O:6"> 6</td>
+    <td align="right" class="lineCount" id="O:6">  </td>
+    <td class="srcLine" id="O:6">
+        <pre class="srcLine" id="O:6"> <span class="comment" id="O:6"> * @author Austin Hall</span></pre>
+    </td>
+</tr>
+<tr id="O:7">
+    <td align="right" class="lineCount" id="O:7"> 7</td>
+    <td align="right" class="lineCount" id="O:7">  </td>
+    <td class="srcLine" id="O:7">
+        <pre class="srcLine" id="O:7"> <span class="comment" id="O:7"> * @version 2/7/17</span></pre>
+    </td>
+</tr>
+<tr id="O:8">
+    <td align="right" class="lineCount" id="O:8"> 8</td>
+    <td align="right" class="lineCount" id="O:8">  </td>
+    <td class="srcLine" id="O:8">
+        <pre class="srcLine" id="O:8"> <span class="comment" id="O:8"> */</span></pre>
+    </td>
+</tr>
+<tr id="O:9">
+    <td align="right" class="lineCount" id="O:9"> 9</td>
+    <td align="right" class="lineCount" id="O:9">  </td>
+    <td class="srcLine" id="O:9">
+        <pre class="srcLine" id="O:9"> <span class="keyword" id="O:9">public</span> <span class="keyword" id="O:9">class</span> Dodecahedron {</pre>
+    </td>
+</tr>
+<tr id="O:10">
+    <td align="right" class="lineCount" id="O:10"> 10</td>
+    <td align="right" class="lineCount" id="O:10">  </td>
+    <td class="srcLine" id="O:10">
+        <pre class="srcLine" id="O:10"> </pre>
+    </td>
+</tr>
+<tr id="O:11">
+    <td align="right" class="lineCount" id="O:11"> 11</td>
+    <td align="right" class="lineCount" id="O:11">  </td>
+    <td class="srcLine" id="O:11">
+        <pre class="srcLine" id="O:11">    <span class="comment" id="O:11">//instance variables</span></pre>
+    </td>
+</tr>
+<tr id="O:12">
+    <td align="right" class="lineCount" id="O:12"> 12</td>
+    <td align="right" class="lineCount" id="O:12">  </td>
+    <td class="srcLine" id="O:12">
+        <pre class="srcLine" id="O:12">    private <span class="keyword" id="O:12">String</span> label = "<span class="string" id="O:12" />";</pre>
+    </td>
+</tr>
+<tr id="O:13">
+    <td align="right" class="lineCount" id="O:13"> 13</td>
+    <td align="right" class="lineCount" id="O:13">  </td>
+    <td class="srcLine" id="O:13">
+        <pre class="srcLine" id="O:13">    private <span class="keyword" id="O:13">String</span> color = "<span class="string" id="O:13" />";</pre>
+    </td>
+</tr>
+<tr id="O:14">
+    <td align="right" class="lineCount" id="O:14"> 14</td>
+    <td align="right" class="lineCount" id="O:14">  </td>
+    <td class="srcLine" id="O:14">
+        <pre class="srcLine" id="O:14">    private <span class="keyword" id="O:14">double</span> edge = 0;</pre>
+    </td>
+</tr>
+<tr id="O:15">
+    <td align="right" class="lineCount" id="O:15"> 15</td>
+    <td align="right" class="lineCount" id="O:15">  </td>
+    <td class="srcLine" id="O:15">
+        <pre class="srcLine" id="O:15">    private <span class="keyword" id="O:15">static</span> <span class="keyword" id="O:15">int</span> count = 0;</pre>
+    </td>
+</tr>
+<tr id="O:16">
+    <td align="right" class="lineCount" id="O:16"> 16</td>
+    <td align="right" class="lineCount" id="O:16">  </td>
+    <td class="srcLine" id="O:16">
+        <pre class="srcLine" id="O:16">    </pre>
+    </td>
+</tr>
+<tr id="O:17">
+    <td align="right" class="lineCount" id="O:17"> 17</td>
+    <td align="right" class="lineCount" id="O:17">  </td>
+    <td class="srcLine" id="O:17">
+        <pre class="srcLine" id="O:17">    <span class="comment" id="O:17">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:18">
+    <td align="right" class="lineCount" id="O:18"> 18</td>
+    <td align="right" class="lineCount" id="O:18">  </td>
+    <td class="srcLine" id="O:18">
+        <pre class="srcLine" id="O:18"> <span class="comment" id="O:18">    * Constructor for the Dodecahedron class.</span></pre>
+    </td>
+</tr>
+<tr id="O:19">
+    <td align="right" class="lineCount" id="O:19"> 19</td>
+    <td align="right" class="lineCount" id="O:19">  </td>
+    <td class="srcLine" id="O:19">
+        <pre class="srcLine" id="O:19"> <span class="comment" id="O:19">    * @param labelIn used as label for class.</span></pre>
+    </td>
+</tr>
+<tr id="O:20">
+    <td align="right" class="lineCount" id="O:20"> 20</td>
+    <td align="right" class="lineCount" id="O:20">  </td>
+    <td class="srcLine" id="O:20">
+        <pre class="srcLine" id="O:20"> <span class="comment" id="O:20">    * @param colorIn used as color for class.</span></pre>
+    </td>
+</tr>
+<tr id="O:21">
+    <td align="right" class="lineCount" id="O:21"> 21</td>
+    <td align="right" class="lineCount" id="O:21">  </td>
+    <td class="srcLine" id="O:21">
+        <pre class="srcLine" id="O:21"> <span class="comment" id="O:21">    * @param edgeIn used as edge length for class.</span></pre>
+    </td>
+</tr>
+<tr id="O:22">
+    <td align="right" class="lineCount" id="O:22"> 22</td>
+    <td align="right" class="lineCount" id="O:22">  </td>
+    <td class="srcLine" id="O:22">
+        <pre class="srcLine" id="O:22"> <span class="comment" id="O:22">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:23">
+    <td align="right" class="lineCount" id="O:23"> 23</td>
+    <td align="right" class="lineCount" id="O:23">  </td>
+    <td class="srcLine" id="O:23">
+        <pre class="srcLine" id="O:23">    public Dodecahedron(<span class="keyword" id="O:23">String</span> labelIn, String colorIn,</pre>
+    </td>
+</tr>
+<tr id="O:24">
+    <td align="right" class="lineCount" id="O:24"> 24</td>
+    <td align="right" class="lineCount" id="O:24">  </td>
+    <td class="srcLine" id="O:24">
+        <pre class="srcLine" id="O:24">                         <span class="keyword" id="O:24">double</span> edgeIn) {</pre>
+    </td>
+</tr>
+<tr id="O:25">
+    <td align="right" class="lineCount" id="O:25"> 25</td>
+    <td align="right" class="lineCount" id="O:25">  </td>
+    <td class="srcLine" id="O:25">
+        <pre class="srcLine" id="O:25">               </pre>
+    </td>
+</tr>
+<tr id="O:26">
+    <td align="right" class="lineCount" id="O:26"> 26</td>
+    <td align="right" class="lineCount" id="O:26">  </td>
+    <td class="srcLine" id="O:26">
+        <pre class="srcLine" id="O:26">       setLabel(labelIn);</pre>
+    </td>
+</tr>
+<tr id="O:27">
+    <td align="right" class="lineCount" id="O:27"> 27</td>
+    <td align="right" class="lineCount" id="O:27">  </td>
+    <td class="srcLine" id="O:27">
+        <pre class="srcLine" id="O:27">       setColor(colorIn);</pre>
+    </td>
+</tr>
+<tr id="O:28">
+    <td align="right" class="lineCount" id="O:28"> 28</td>
+    <td align="right" class="lineCount" id="O:28">  </td>
+    <td class="srcLine" id="O:28">
+        <pre class="srcLine" id="O:28">       setEdge(edgeIn);</pre>
+    </td>
+</tr>
+<tr id="O:29">
+    <td align="right" class="lineCount" id="O:29"> 29</td>
+    <td align="right" class="lineCount" id="O:29">  </td>
+    <td class="srcLine" id="O:29">
+        <pre class="srcLine" id="O:29">       count++;</pre>
+    </td>
+</tr>
+<tr id="O:30">
+    <td align="right" class="lineCount" id="O:30"> 30</td>
+    <td align="right" class="lineCount" id="O:30">  </td>
+    <td class="srcLine" id="O:30">
+        <pre class="srcLine" id="O:30">    </pre>
+    </td>
+</tr>
+<tr id="O:31">
+    <td align="right" class="lineCount" id="O:31"> 31</td>
+    <td align="right" class="lineCount" id="O:31">  </td>
+    <td class="srcLine" id="O:31">
+        <pre class="srcLine" id="O:31">    }</pre>
+    </td>
+</tr>
+<tr id="O:32">
+    <td align="right" class="lineCount" id="O:32"> 32</td>
+    <td align="right" class="lineCount" id="O:32">  </td>
+    <td class="srcLine" id="O:32">
+        <pre class="srcLine" id="O:32">    <span class="comment" id="O:32">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:33">
+    <td align="right" class="lineCount" id="O:33"> 33</td>
+    <td align="right" class="lineCount" id="O:33">  </td>
+    <td class="srcLine" id="O:33">
+        <pre class="srcLine" id="O:33"> <span class="comment" id="O:33">    * This method returns the label.</span></pre>
+    </td>
+</tr>
+<tr id="O:34">
+    <td align="right" class="lineCount" id="O:34"> 34</td>
+    <td align="right" class="lineCount" id="O:34">  </td>
+    <td class="srcLine" id="O:34">
+        <pre class="srcLine" id="O:34"> <span class="comment" id="O:34">    * @return label returns the label</span></pre>
+    </td>
+</tr>
+<tr id="O:35">
+    <td align="right" class="lineCount" id="O:35"> 35</td>
+    <td align="right" class="lineCount" id="O:35">  </td>
+    <td class="srcLine" id="O:35">
+        <pre class="srcLine" id="O:35"> <span class="comment" id="O:35">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:36">
+    <td align="right" class="lineCount" id="O:36"> 36</td>
+    <td align="right" class="lineCount" id="O:36">  </td>
+    <td class="srcLine" id="O:36">
+        <pre class="srcLine" id="O:36">    public <span class="keyword" id="O:36">String</span> getLabel() {</pre>
+    </td>
+</tr>
+<tr id="O:37">
+    <td align="right" class="lineCount" id="O:37"> 37</td>
+    <td align="right" class="lineCount" id="O:37">  </td>
+    <td class="srcLine" id="O:37">
+        <pre class="srcLine" id="O:37">       <span class="keyword" id="O:37">return</span> label;</pre>
+    </td>
+</tr>
+<tr id="O:38">
+    <td align="right" class="lineCount" id="O:38"> 38</td>
+    <td align="right" class="lineCount" id="O:38">  </td>
+    <td class="srcLine" id="O:38">
+        <pre class="srcLine" id="O:38">    }</pre>
+    </td>
+</tr>
+<tr id="O:39">
+    <td align="right" class="lineCount" id="O:39"> 39</td>
+    <td align="right" class="lineCount" id="O:39">  </td>
+    <td class="srcLine" id="O:39">
+        <pre class="srcLine" id="O:39">    <span class="comment" id="O:39">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:40">
+    <td align="right" class="lineCount" id="O:40"> 40</td>
+    <td align="right" class="lineCount" id="O:40">  </td>
+    <td class="srcLine" id="O:40">
+        <pre class="srcLine" id="O:40"> <span class="comment" id="O:40">    * This method sets the label.</span></pre>
+    </td>
+</tr>
+<tr id="O:41">
+    <td align="right" class="lineCount" id="O:41"> 41</td>
+    <td align="right" class="lineCount" id="O:41">  </td>
+    <td class="srcLine" id="O:41">
+        <pre class="srcLine" id="O:41"> <span class="comment" id="O:41">    * @param labelIn used as label for class.</span></pre>
+    </td>
+</tr>
+<tr id="O:42">
+    <td align="right" class="lineCount" id="O:42"> 42</td>
+    <td align="right" class="lineCount" id="O:42">  </td>
+    <td class="srcLine" id="O:42">
+        <pre class="srcLine" id="O:42"> <span class="comment" id="O:42">    * @return isLabelSet.</span></pre>
+    </td>
+</tr>
+<tr id="O:43">
+    <td align="right" class="lineCount" id="O:43"> 43</td>
+    <td align="right" class="lineCount" id="O:43">  </td>
+    <td class="srcLine" id="O:43">
+        <pre class="srcLine" id="O:43"> <span class="comment" id="O:43">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:44">
+    <td align="right" class="lineCount" id="O:44"> 44</td>
+    <td align="right" class="lineCount" id="O:44">  </td>
+    <td class="srcLine" id="O:44">
+        <pre class="srcLine" id="O:44">    public <span class="keyword" id="O:44">boolean</span> setLabel(<span class="keyword" id="O:44">String</span> labelIn) {</pre>
+    </td>
+</tr>
+<tr id="O:45">
+    <td align="right" class="lineCount" id="O:45"> 45</td>
+    <td align="right" class="lineCount" id="O:45">  </td>
+    <td class="srcLine" id="O:45">
+        <pre class="srcLine" id="O:45">       <span class="keyword" id="O:45">boolean</span> isLabelSet = <span class="keyword" id="O:45">false</span>;</pre>
+    </td>
+</tr>
+<tr id="O:46">
+    <td align="right" class="lineCount" id="O:46"> 46</td>
+    <td align="right" class="lineCount" id="O:46">  </td>
+    <td class="srcLine" id="O:46">
+        <pre class="srcLine" id="O:46">       <span class="keyword" id="O:46">if</span> (labelIn != null) {</pre>
+    </td>
+</tr>
+<tr id="O:47">
+    <td align="right" class="lineCount" id="O:47"> 47</td>
+    <td align="right" class="lineCount" id="O:47">  </td>
+    <td class="srcLine" id="O:47">
+        <pre class="srcLine" id="O:47">          labelIn.trim();</pre>
+    </td>
+</tr>
+<tr id="O:48">
+    <td align="right" class="lineCount" id="O:48"> 48</td>
+    <td align="right" class="lineCount" id="O:48">  </td>
+    <td class="srcLine" id="O:48">
+        <pre class="srcLine" id="O:48">          label = labelIn;</pre>
+    </td>
+</tr>
+<tr id="O:49">
+    <td align="right" class="lineCount" id="O:49"> 49</td>
+    <td align="right" class="lineCount" id="O:49">  </td>
+    <td class="srcLine" id="O:49">
+        <pre class="srcLine" id="O:49">          isLabelSet = <span class="keyword" id="O:49">true</span>;</pre>
+    </td>
+</tr>
+<tr id="O:50">
+    <td align="right" class="lineCount" id="O:50"> 50</td>
+    <td align="right" class="lineCount" id="O:50">  </td>
+    <td class="srcLine" id="O:50">
+        <pre class="srcLine" id="O:50">       }</pre>
+    </td>
+</tr>
+<tr id="O:51">
+    <td align="right" class="lineCount" id="O:51"> 51</td>
+    <td align="right" class="lineCount" id="O:51">  </td>
+    <td class="srcLine" id="O:51">
+        <pre class="srcLine" id="O:51">       <span class="keyword" id="O:51">return</span> isLabelSet;</pre>
+    </td>
+</tr>
+<tr id="O:52">
+    <td align="right" class="lineCount" id="O:52"> 52</td>
+    <td align="right" class="lineCount" id="O:52">  </td>
+    <td class="srcLine" id="O:52">
+        <pre class="srcLine" id="O:52">    }</pre>
+    </td>
+</tr>
+<tr id="O:53">
+    <td align="right" class="lineCount" id="O:53"> 53</td>
+    <td align="right" class="lineCount" id="O:53">  </td>
+    <td class="srcLine" id="O:53">
+        <pre class="srcLine" id="O:53">    <span class="comment" id="O:53">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:54">
+    <td align="right" class="lineCount" id="O:54"> 54</td>
+    <td align="right" class="lineCount" id="O:54">  </td>
+    <td class="srcLine" id="O:54">
+        <pre class="srcLine" id="O:54"> <span class="comment" id="O:54">    * This method returns the color of class.</span></pre>
+    </td>
+</tr>
+<tr id="O:55">
+    <td align="right" class="lineCount" id="O:55"> 55</td>
+    <td align="right" class="lineCount" id="O:55">  </td>
+    <td class="srcLine" id="O:55">
+        <pre class="srcLine" id="O:55"> <span class="comment" id="O:55">    * @return color.</span></pre>
+    </td>
+</tr>
+<tr id="O:56">
+    <td align="right" class="lineCount" id="O:56"> 56</td>
+    <td align="right" class="lineCount" id="O:56">  </td>
+    <td class="srcLine" id="O:56">
+        <pre class="srcLine" id="O:56"> <span class="comment" id="O:56">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:57">
+    <td align="right" class="lineCount" id="O:57"> 57</td>
+    <td align="right" class="lineCount" id="O:57">  </td>
+    <td class="srcLine" id="O:57">
+        <pre class="srcLine" id="O:57">    public <span class="keyword" id="O:57">String</span> getColor() {</pre>
+    </td>
+</tr>
+<tr id="O:58">
+    <td align="right" class="lineCount" id="O:58"> 58</td>
+    <td align="right" class="lineCount" id="O:58">  </td>
+    <td class="srcLine" id="O:58">
+        <pre class="srcLine" id="O:58">       <span class="keyword" id="O:58">return</span> color;</pre>
+    </td>
+</tr>
+<tr id="O:59">
+    <td align="right" class="lineCount" id="O:59"> 59</td>
+    <td align="right" class="lineCount" id="O:59">  </td>
+    <td class="srcLine" id="O:59">
+        <pre class="srcLine" id="O:59">    } </pre>
+    </td>
+</tr>
+<tr id="O:60">
+    <td align="right" class="lineCount" id="O:60"> 60</td>
+    <td align="right" class="lineCount" id="O:60">  </td>
+    <td class="srcLine" id="O:60">
+        <pre class="srcLine" id="O:60">    <span class="comment" id="O:60">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:61">
+    <td align="right" class="lineCount" id="O:61"> 61</td>
+    <td align="right" class="lineCount" id="O:61">  </td>
+    <td class="srcLine" id="O:61">
+        <pre class="srcLine" id="O:61"> <span class="comment" id="O:61">    * This method sets the color of the class.</span></pre>
+    </td>
+</tr>
+<tr id="O:62">
+    <td align="right" class="lineCount" id="O:62"> 62</td>
+    <td align="right" class="lineCount" id="O:62">  </td>
+    <td class="srcLine" id="O:62">
+        <pre class="srcLine" id="O:62"> <span class="comment" id="O:62">    * @param colorIn used as color for class.</span></pre>
+    </td>
+</tr>
+<tr id="O:63">
+    <td align="right" class="lineCount" id="O:63"> 63</td>
+    <td align="right" class="lineCount" id="O:63">  </td>
+    <td class="srcLine" id="O:63">
+        <pre class="srcLine" id="O:63"> <span class="comment" id="O:63">    * @return isColorSet.</span></pre>
+    </td>
+</tr>
+<tr id="O:64">
+    <td align="right" class="lineCount" id="O:64"> 64</td>
+    <td align="right" class="lineCount" id="O:64">  </td>
+    <td class="srcLine" id="O:64">
+        <pre class="srcLine" id="O:64"> <span class="comment" id="O:64">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:65">
+    <td align="right" class="lineCount" id="O:65"> 65</td>
+    <td align="right" class="lineCount" id="O:65">  </td>
+    <td class="srcLine" id="O:65">
+        <pre class="srcLine" id="O:65">    public <span class="keyword" id="O:65">boolean</span> setColor(<span class="keyword" id="O:65">String</span> colorIn) {</pre>
+    </td>
+</tr>
+<tr id="O:66">
+    <td align="right" class="lineCount" id="O:66"> 66</td>
+    <td align="right" class="lineCount" id="O:66">  </td>
+    <td class="srcLine" id="O:66">
+        <pre class="srcLine" id="O:66">       <span class="keyword" id="O:66">boolean</span> isColorSet = <span class="keyword" id="O:66">false</span>;</pre>
+    </td>
+</tr>
+<tr id="O:67">
+    <td align="right" class="lineCount" id="O:67"> 67</td>
+    <td align="right" class="lineCount" id="O:67">  </td>
+    <td class="srcLine" id="O:67">
+        <pre class="srcLine" id="O:67">       </pre>
+    </td>
+</tr>
+<tr id="O:68">
+    <td align="right" class="lineCount" id="O:68"> 68</td>
+    <td align="right" class="lineCount" id="O:68">  </td>
+    <td class="srcLine" id="O:68">
+        <pre class="srcLine" id="O:68">       <span class="keyword" id="O:68">if</span> (colorIn != null) {</pre>
+    </td>
+</tr>
+<tr id="O:69">
+    <td align="right" class="lineCount" id="O:69"> 69</td>
+    <td align="right" class="lineCount" id="O:69">  </td>
+    <td class="srcLine" id="O:69">
+        <pre class="srcLine" id="O:69">          colorIn.trim();</pre>
+    </td>
+</tr>
+<tr id="O:70">
+    <td align="right" class="lineCount" id="O:70"> 70</td>
+    <td align="right" class="lineCount" id="O:70">  </td>
+    <td class="srcLine" id="O:70">
+        <pre class="srcLine" id="O:70">          color = colorIn;</pre>
+    </td>
+</tr>
+<tr id="O:71">
+    <td align="right" class="lineCount" id="O:71"> 71</td>
+    <td align="right" class="lineCount" id="O:71">  </td>
+    <td class="srcLine" id="O:71">
+        <pre class="srcLine" id="O:71">          isColorSet = <span class="keyword" id="O:71">true</span>;</pre>
+    </td>
+</tr>
+<tr id="O:72">
+    <td align="right" class="lineCount" id="O:72"> 72</td>
+    <td align="right" class="lineCount" id="O:72">  </td>
+    <td class="srcLine" id="O:72">
+        <pre class="srcLine" id="O:72">       }</pre>
+    </td>
+</tr>
+<tr id="O:73">
+    <td align="right" class="lineCount" id="O:73"> 73</td>
+    <td align="right" class="lineCount" id="O:73">  </td>
+    <td class="srcLine" id="O:73">
+        <pre class="srcLine" id="O:73">       <span class="keyword" id="O:73">return</span> isColorSet;</pre>
+    </td>
+</tr>
+<tr id="O:74">
+    <td align="right" class="lineCount" id="O:74"> 74</td>
+    <td align="right" class="lineCount" id="O:74">  </td>
+    <td class="srcLine" id="O:74">
+        <pre class="srcLine" id="O:74">    }</pre>
+    </td>
+</tr>
+<tr id="O:75">
+    <td align="right" class="lineCount" id="O:75"> 75</td>
+    <td align="right" class="lineCount" id="O:75">  </td>
+    <td class="srcLine" id="O:75">
+        <pre class="srcLine" id="O:75">    <span class="comment" id="O:75">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:76">
+    <td align="right" class="lineCount" id="O:76"> 76</td>
+    <td align="right" class="lineCount" id="O:76">  </td>
+    <td class="srcLine" id="O:76">
+        <pre class="srcLine" id="O:76"> <span class="comment" id="O:76">    * This method returns the edge length.</span></pre>
+    </td>
+</tr>
+<tr id="O:77">
+    <td align="right" class="lineCount" id="O:77"> 77</td>
+    <td align="right" class="lineCount" id="O:77">  </td>
+    <td class="srcLine" id="O:77">
+        <pre class="srcLine" id="O:77"> <span class="comment" id="O:77">    * @return edge.</span></pre>
+    </td>
+</tr>
+<tr id="O:78">
+    <td align="right" class="lineCount" id="O:78"> 78</td>
+    <td align="right" class="lineCount" id="O:78">  </td>
+    <td class="srcLine" id="O:78">
+        <pre class="srcLine" id="O:78"> <span class="comment" id="O:78">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:79">
+    <td align="right" class="lineCount" id="O:79"> 79</td>
+    <td align="right" class="lineCount" id="O:79">  </td>
+    <td class="srcLine" id="O:79">
+        <pre class="srcLine" id="O:79">    public <span class="keyword" id="O:79">double</span> getEdge() {</pre>
+    </td>
+</tr>
+<tr id="O:80">
+    <td align="right" class="lineCount" id="O:80"> 80</td>
+    <td align="right" class="lineCount" id="O:80">  </td>
+    <td class="srcLine" id="O:80">
+        <pre class="srcLine" id="O:80">       </pre>
+    </td>
+</tr>
+<tr id="O:81">
+    <td align="right" class="lineCount" id="O:81"> 81</td>
+    <td align="right" class="lineCount" id="O:81">  </td>
+    <td class="srcLine" id="O:81">
+        <pre class="srcLine" id="O:81">       <span class="keyword" id="O:81">return</span> edge;</pre>
+    </td>
+</tr>
+<tr id="O:82">
+    <td align="right" class="lineCount" id="O:82"> 82</td>
+    <td align="right" class="lineCount" id="O:82">  </td>
+    <td class="srcLine" id="O:82">
+        <pre class="srcLine" id="O:82">    }</pre>
+    </td>
+</tr>
+<tr id="O:83">
+    <td align="right" class="lineCount" id="O:83"> 83</td>
+    <td align="right" class="lineCount" id="O:83">  </td>
+    <td class="srcLine" id="O:83">
+        <pre class="srcLine" id="O:83">    <span class="comment" id="O:83">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:84">
+    <td align="right" class="lineCount" id="O:84"> 84</td>
+    <td align="right" class="lineCount" id="O:84">  </td>
+    <td class="srcLine" id="O:84">
+        <pre class="srcLine" id="O:84"> <span class="comment" id="O:84">    * This method sets the edge length.</span></pre>
+    </td>
+</tr>
+<tr id="O:85">
+    <td align="right" class="lineCount" id="O:85"> 85</td>
+    <td align="right" class="lineCount" id="O:85">  </td>
+    <td class="srcLine" id="O:85">
+        <pre class="srcLine" id="O:85"> <span class="comment" id="O:85">    * @param edgeIn used as edge length of class.</span></pre>
+    </td>
+</tr>
+<tr id="O:86">
+    <td align="right" class="lineCount" id="O:86"> 86</td>
+    <td align="right" class="lineCount" id="O:86">  </td>
+    <td class="srcLine" id="O:86">
+        <pre class="srcLine" id="O:86"> <span class="comment" id="O:86">    * @return isSet.</span></pre>
+    </td>
+</tr>
+<tr id="O:87">
+    <td align="right" class="lineCount" id="O:87"> 87</td>
+    <td align="right" class="lineCount" id="O:87">  </td>
+    <td class="srcLine" id="O:87">
+        <pre class="srcLine" id="O:87"> <span class="comment" id="O:87">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:88">
+    <td align="right" class="lineCount" id="O:88"> 88</td>
+    <td align="right" class="lineCount" id="O:88">  </td>
+    <td class="srcLine" id="O:88">
+        <pre class="srcLine" id="O:88">    public <span class="keyword" id="O:88">boolean</span> setEdge(<span class="keyword" id="O:88">double</span> edgeIn) {</pre>
+    </td>
+</tr>
+<tr id="O:89">
+    <td align="right" class="lineCount" id="O:89"> 89</td>
+    <td align="right" class="lineCount" id="O:89">  </td>
+    <td class="srcLine" id="O:89">
+        <pre class="srcLine" id="O:89">       <span class="keyword" id="O:89">boolean</span> isEdgeSet = <span class="keyword" id="O:89">false</span>;</pre>
+    </td>
+</tr>
+<tr id="O:90">
+    <td align="right" class="lineCount" id="O:90"> 90</td>
+    <td align="right" class="lineCount" id="O:90">  </td>
+    <td class="srcLine" id="O:90">
+        <pre class="srcLine" id="O:90">       <span class="keyword" id="O:90">if</span> (edgeIn &gt; 0) {</pre>
+    </td>
+</tr>
+<tr id="O:91">
+    <td align="right" class="lineCount" id="O:91"> 91</td>
+    <td align="right" class="lineCount" id="O:91">  </td>
+    <td class="srcLine" id="O:91">
+        <pre class="srcLine" id="O:91">          edge = edgeIn;</pre>
+    </td>
+</tr>
+<tr id="O:92">
+    <td align="right" class="lineCount" id="O:92"> 92</td>
+    <td align="right" class="lineCount" id="O:92">  </td>
+    <td class="srcLine" id="O:92">
+        <pre class="srcLine" id="O:92">          isEdgeSet = <span class="keyword" id="O:92">true</span>;</pre>
+    </td>
+</tr>
+<tr id="O:93">
+    <td align="right" class="lineCount" id="O:93"> 93</td>
+    <td align="right" class="lineCount" id="O:93">  </td>
+    <td class="srcLine" id="O:93">
+        <pre class="srcLine" id="O:93">       }</pre>
+    </td>
+</tr>
+<tr id="O:94">
+    <td align="right" class="lineCount" id="O:94"> 94</td>
+    <td align="right" class="lineCount" id="O:94">  </td>
+    <td class="srcLine" id="O:94">
+        <pre class="srcLine" id="O:94">       <span class="keyword" id="O:94">return</span> isEdgeSet;</pre>
+    </td>
+</tr>
+<tr id="O:95">
+    <td align="right" class="lineCount" id="O:95"> 95</td>
+    <td align="right" class="lineCount" id="O:95">  </td>
+    <td class="srcLine" id="O:95">
+        <pre class="srcLine" id="O:95">    }</pre>
+    </td>
+</tr>
+<tr id="O:96">
+    <td align="right" class="lineCount" id="O:96"> 96</td>
+    <td align="right" class="lineCount" id="O:96">  </td>
+    <td class="srcLine" id="O:96">
+        <pre class="srcLine" id="O:96">    <span class="comment" id="O:96">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:97">
+    <td align="right" class="lineCount" id="O:97"> 97</td>
+    <td align="right" class="lineCount" id="O:97">  </td>
+    <td class="srcLine" id="O:97">
+        <pre class="srcLine" id="O:97"> <span class="comment" id="O:97">    * This method calculates surface area of class.</span></pre>
+    </td>
+</tr>
+<tr id="O:98">
+    <td align="right" class="lineCount" id="O:98"> 98</td>
+    <td align="right" class="lineCount" id="O:98">  </td>
+    <td class="srcLine" id="O:98">
+        <pre class="srcLine" id="O:98"> <span class="comment" id="O:98">    * @return returns the surface area.</span></pre>
+    </td>
+</tr>
+<tr id="O:99">
+    <td align="right" class="lineCount" id="O:99"> 99</td>
+    <td align="right" class="lineCount" id="O:99">  </td>
+    <td class="srcLine" id="O:99">
+        <pre class="srcLine" id="O:99"> <span class="comment" id="O:99">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:100">
+    <td align="right" class="lineCount" id="O:100"> 100</td>
+    <td align="right" class="lineCount" id="O:100">  </td>
+    <td class="srcLine" id="O:100">
+        <pre class="srcLine" id="O:100">    public <span class="keyword" id="O:100">double</span> surfaceArea() {</pre>
+    </td>
+</tr>
+<tr id="O:101">
+    <td align="right" class="lineCount" id="O:101"> 101</td>
+    <td align="right" class="lineCount" id="O:101">  </td>
+    <td class="srcLine" id="O:101">
+        <pre class="srcLine" id="O:101">       <span class="keyword" id="O:101">return</span> 3 * Math.sqrt(25 + 10 * Math.sqrt(5)) * Math.pow(edge, 2);</pre>
+    </td>
+</tr>
+<tr id="O:102">
+    <td align="right" class="lineCount" id="O:102"> 102</td>
+    <td align="right" class="lineCount" id="O:102">  </td>
+    <td class="srcLine" id="O:102">
+        <pre class="srcLine" id="O:102">    }</pre>
+    </td>
+</tr>
+<tr id="O:103">
+    <td align="right" class="lineCount" id="O:103"> 103</td>
+    <td align="right" class="lineCount" id="O:103">  </td>
+    <td class="srcLine" id="O:103">
+        <pre class="srcLine" id="O:103">    <span class="comment" id="O:103">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:104">
+    <td align="right" class="lineCount" id="O:104"> 104</td>
+    <td align="right" class="lineCount" id="O:104">  </td>
+    <td class="srcLine" id="O:104">
+        <pre class="srcLine" id="O:104"> <span class="comment" id="O:104">    * This method calculates volume of class.</span></pre>
+    </td>
+</tr>
+<tr id="O:105">
+    <td align="right" class="lineCount" id="O:105"> 105</td>
+    <td align="right" class="lineCount" id="O:105">  </td>
+    <td class="srcLine" id="O:105">
+        <pre class="srcLine" id="O:105"> <span class="comment" id="O:105">    * @return returns the volume.</span></pre>
+    </td>
+</tr>
+<tr id="O:106">
+    <td align="right" class="lineCount" id="O:106"> 106</td>
+    <td align="right" class="lineCount" id="O:106">  </td>
+    <td class="srcLine" id="O:106">
+        <pre class="srcLine" id="O:106"> <span class="comment" id="O:106">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:107">
+    <td align="right" class="lineCount" id="O:107"> 107</td>
+    <td align="right" class="lineCount" id="O:107">  </td>
+    <td class="srcLine" id="O:107">
+        <pre class="srcLine" id="O:107">    public <span class="keyword" id="O:107">double</span> volume() {</pre>
+    </td>
+</tr>
+<tr id="O:108">
+    <td align="right" class="lineCount" id="O:108"> 108</td>
+    <td align="right" class="lineCount" id="O:108">  </td>
+    <td class="srcLine" id="O:108">
+        <pre class="srcLine" id="O:108">       <span class="keyword" id="O:108">return</span> ((15 + 7 * Math.sqrt(5)) / (4)) * Math.pow(edge, 3);</pre>
+    </td>
+</tr>
+<tr id="O:109">
+    <td align="right" class="lineCount" id="O:109"> 109</td>
+    <td align="right" class="lineCount" id="O:109">  </td>
+    <td class="srcLine" id="O:109">
+        <pre class="srcLine" id="O:109">    }</pre>
+    </td>
+</tr>
+<tr id="O:110">
+    <td align="right" class="lineCount" id="O:110"> 110</td>
+    <td align="right" class="lineCount" id="O:110">  </td>
+    <td class="srcLine" id="O:110">
+        <pre class="srcLine" id="O:110">    <span class="comment" id="O:110">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:111">
+    <td align="right" class="lineCount" id="O:111"> 111</td>
+    <td align="right" class="lineCount" id="O:111">  </td>
+    <td class="srcLine" id="O:111">
+        <pre class="srcLine" id="O:111"> <span class="comment" id="O:111">    * This method calculates ratio of surface area to volume.</span></pre>
+    </td>
+</tr>
+<tr id="O:112">
+    <td align="right" class="lineCount" id="O:112"> 112</td>
+    <td align="right" class="lineCount" id="O:112">  </td>
+    <td class="srcLine" id="O:112">
+        <pre class="srcLine" id="O:112"> <span class="comment" id="O:112">    * @return the surface area to volume ratio.</span></pre>
+    </td>
+</tr>
+<tr id="O:113">
+    <td align="right" class="lineCount" id="O:113"> 113</td>
+    <td align="right" class="lineCount" id="O:113">  </td>
+    <td class="srcLine" id="O:113">
+        <pre class="srcLine" id="O:113"> <span class="comment" id="O:113">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:114">
+    <td align="right" class="lineCount" id="O:114"> 114</td>
+    <td align="right" class="lineCount" id="O:114">  </td>
+    <td class="srcLine" id="O:114">
+        <pre class="srcLine" id="O:114">    public <span class="keyword" id="O:114">double</span> surfaceToVolumeRatio() {</pre>
+    </td>
+</tr>
+<tr id="O:115">
+    <td align="right" class="lineCount" id="O:115"> 115</td>
+    <td align="right" class="lineCount" id="O:115">  </td>
+    <td class="srcLine" id="O:115">
+        <pre class="srcLine" id="O:115">       <span class="keyword" id="O:115">return</span> surfaceArea() / volume();</pre>
+    </td>
+</tr>
+<tr id="O:116">
+    <td align="right" class="lineCount" id="O:116"> 116</td>
+    <td align="right" class="lineCount" id="O:116">  </td>
+    <td class="srcLine" id="O:116">
+        <pre class="srcLine" id="O:116">    }</pre>
+    </td>
+</tr>
+<tr id="O:117">
+    <td align="right" class="lineCount" id="O:117"> 117</td>
+    <td align="right" class="lineCount" id="O:117">  </td>
+    <td class="srcLine" id="O:117">
+        <pre class="srcLine" id="O:117">    <span class="comment" id="O:117">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:118">
+    <td align="right" class="lineCount" id="O:118"> 118</td>
+    <td align="right" class="lineCount" id="O:118">  </td>
+    <td class="srcLine" id="O:118">
+        <pre class="srcLine" id="O:118"> <span class="comment" id="O:118">    * This method creates a string of the information of class.</span></pre>
+    </td>
+</tr>
+<tr id="O:119">
+    <td align="right" class="lineCount" id="O:119"> 119</td>
+    <td align="right" class="lineCount" id="O:119">  </td>
+    <td class="srcLine" id="O:119">
+        <pre class="srcLine" id="O:119"> <span class="comment" id="O:119">    * @return output.</span></pre>
+    </td>
+</tr>
+<tr id="O:120">
+    <td align="right" class="lineCount" id="O:120"> 120</td>
+    <td align="right" class="lineCount" id="O:120">  </td>
+    <td class="srcLine" id="O:120">
+        <pre class="srcLine" id="O:120"> <span class="comment" id="O:120">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:121">
+    <td align="right" class="lineCount" id="O:121"> 121</td>
+    <td align="right" class="lineCount" id="O:121">  </td>
+    <td class="srcLine" id="O:121">
+        <pre class="srcLine" id="O:121">    public <span class="keyword" id="O:121">String</span> toString() {</pre>
+    </td>
+</tr>
+<tr id="O:122">
+    <td align="right" class="lineCount" id="O:122"> 122</td>
+    <td align="right" class="lineCount" id="O:122">  </td>
+    <td class="srcLine" id="O:122">
+        <pre class="srcLine" id="O:122">    </pre>
+    </td>
+</tr>
+<tr id="O:123">
+    <td align="right" class="lineCount" id="O:123"> 123</td>
+    <td align="right" class="lineCount" id="O:123">  </td>
+    <td class="srcLine" id="O:123">
+        <pre class="srcLine" id="O:123">       <span class="keyword" id="O:123">DecimalFormat</span> fmt = <span class="keyword" id="O:123">new</span> <span class="keyword" id="O:123">DecimalFormat</span>("<span class="string" id="O:123">#,##0.0##</span>");</pre>
+    </td>
+</tr>
+<tr id="O:124">
+    <td align="right" class="lineCount" id="O:124"> 124</td>
+    <td align="right" class="lineCount" id="O:124">  </td>
+    <td class="srcLine" id="O:124">
+        <pre class="srcLine" id="O:124">       </pre>
+    </td>
+</tr>
+<tr id="O:125">
+    <td align="right" class="lineCount" id="O:125"> 125</td>
+    <td align="right" class="lineCount" id="O:125">  </td>
+    <td class="srcLine" id="O:125">
+        <pre class="srcLine" id="O:125">       <span class="keyword" id="O:125">String</span> output = "<span class="string" id="O:125">Dodecahedron \"</span>" + label + "<span class="string" id="O:125">\" is </span>"</pre>
+    </td>
+</tr>
+<tr id="O:126">
+    <td align="right" class="lineCount" id="O:126"> 126</td>
+    <td align="right" class="lineCount" id="O:126">  </td>
+    <td class="srcLine" id="O:126">
+        <pre class="srcLine" id="O:126">          + "<span class="string" id="O:126">\"</span>" + color + "<span class="string" id="O:126">\"</span>" + "<span class="string" id="O:126"> with 30 edges of length </span>" + edge</pre>
+    </td>
+</tr>
+<tr id="O:127">
+    <td align="right" class="lineCount" id="O:127"> 127</td>
+    <td align="right" class="lineCount" id="O:127">  </td>
+    <td class="srcLine" id="O:127">
+        <pre class="srcLine" id="O:127">          + "<span class="string" id="O:127"> units.\n</span>"</pre>
+    </td>
+</tr>
+<tr id="O:128">
+    <td align="right" class="lineCount" id="O:128"> 128</td>
+    <td align="right" class="lineCount" id="O:128">  </td>
+    <td class="srcLine" id="O:128">
+        <pre class="srcLine" id="O:128">          + "<span class="string" id="O:128">\tsurface area = </span>" + fmt.format(surfaceArea()) + "<span class="string" id="O:128"> square units\n</span>"</pre>
+    </td>
+</tr>
+<tr id="O:129">
+    <td align="right" class="lineCount" id="O:129"> 129</td>
+    <td align="right" class="lineCount" id="O:129">  </td>
+    <td class="srcLine" id="O:129">
+        <pre class="srcLine" id="O:129">          + "<span class="string" id="O:129">\tvolume = </span>" + fmt.format(volume()) + "<span class="string" id="O:129"> cubic units\n</span>"</pre>
+    </td>
+</tr>
+<tr id="O:130">
+    <td align="right" class="lineCount" id="O:130"> 130</td>
+    <td align="right" class="lineCount" id="O:130">  </td>
+    <td class="srcLine" id="O:130">
+        <pre class="srcLine" id="O:130">          + "<span class="string" id="O:130">\tsurface/volume ratio = </span>"</pre>
+    </td>
+</tr>
+<tr id="O:131">
+    <td align="right" class="lineCount" id="O:131"> 131</td>
+    <td align="right" class="lineCount" id="O:131">  </td>
+    <td class="srcLine" id="O:131">
+        <pre class="srcLine" id="O:131">          + fmt.format(surfaceToVolumeRatio());</pre>
+    </td>
+</tr>
+<tr id="O:132">
+    <td align="right" class="lineCount" id="O:132"> 132</td>
+    <td align="right" class="lineCount" id="O:132">  </td>
+    <td class="srcLine" id="O:132">
+        <pre class="srcLine" id="O:132">       <span class="keyword" id="O:132">return</span> output;</pre>
+    </td>
+</tr>
+<tr id="O:133">
+    <td align="right" class="lineCount" id="O:133"> 133</td>
+    <td align="right" class="lineCount" id="O:133">  </td>
+    <td class="srcLine" id="O:133">
+        <pre class="srcLine" id="O:133">    }</pre>
+    </td>
+</tr>
+<tr id="O:134">
+    <td align="right" class="lineCount" id="O:134"> 134</td>
+    <td align="right" class="lineCount" id="O:134">  </td>
+    <td class="srcLine" id="O:134">
+        <pre class="srcLine" id="O:134">    <span class="comment" id="O:134">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:135">
+    <td align="right" class="lineCount" id="O:135"> 135</td>
+    <td align="right" class="lineCount" id="O:135">  </td>
+    <td class="srcLine" id="O:135">
+        <pre class="srcLine" id="O:135"> <span class="comment" id="O:135">    * This method returns the count.</span></pre>
+    </td>
+</tr>
+<tr id="O:136">
+    <td align="right" class="lineCount" id="O:136"> 136</td>
+    <td align="right" class="lineCount" id="O:136">  </td>
+    <td class="srcLine" id="O:136">
+        <pre class="srcLine" id="O:136"> <span class="comment" id="O:136">    * @return count.</span></pre>
+    </td>
+</tr>
+<tr id="O:137">
+    <td align="right" class="lineCount" id="O:137"> 137</td>
+    <td align="right" class="lineCount" id="O:137">  </td>
+    <td class="srcLine" id="O:137">
+        <pre class="srcLine" id="O:137"> <span class="comment" id="O:137">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:138">
+    <td align="right" class="lineCount" id="O:138"> 138</td>
+    <td align="right" class="lineCount" id="O:138">  </td>
+    <td class="srcLine" id="O:138">
+        <pre class="srcLine" id="O:138">    public <span class="keyword" id="O:138">static</span> <span class="keyword" id="O:138">int</span> getCount() {</pre>
+    </td>
+</tr>
+<tr id="O:139">
+    <td align="right" class="lineCount" id="O:139"> 139</td>
+    <td align="right" class="lineCount" id="O:139">  </td>
+    <td class="srcLine" id="O:139">
+        <pre class="srcLine" id="O:139">       <span class="keyword" id="O:139">return</span> count;</pre>
+    </td>
+</tr>
+<tr id="O:140">
+    <td align="right" class="lineCount" id="O:140"> 140</td>
+    <td align="right" class="lineCount" id="O:140">  </td>
+    <td class="srcLine" id="O:140">
+        <pre class="srcLine" id="O:140">    }</pre>
+    </td>
+</tr>
+<tr id="O:141">
+    <td align="right" class="lineCount" id="O:141"> 141</td>
+    <td align="right" class="lineCount" id="O:141">  </td>
+    <td class="srcLine" id="O:141">
+        <pre class="srcLine" id="O:141">    <span class="comment" id="O:141">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:142">
+    <td align="right" class="lineCount" id="O:142"> 142</td>
+    <td align="right" class="lineCount" id="O:142">  </td>
+    <td class="srcLine" id="O:142">
+        <pre class="srcLine" id="O:142"> <span class="comment" id="O:142">    * This method resets the count.</span></pre>
+    </td>
+</tr>
+<tr id="O:143">
+    <td align="right" class="lineCount" id="O:143"> 143</td>
+    <td align="right" class="lineCount" id="O:143">  </td>
+    <td class="srcLine" id="O:143">
+        <pre class="srcLine" id="O:143"> <span class="comment" id="O:143">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:144">
+    <td align="right" class="lineCount" id="O:144"> 144</td>
+    <td align="right" class="lineCount" id="O:144">  </td>
+    <td class="srcLine" id="O:144">
+        <pre class="srcLine" id="O:144">    public <span class="keyword" id="O:144">static</span> <span class="keyword" id="O:144">void</span> resetCount() {</pre>
+    </td>
+</tr>
+<tr id="O:145">
+    <td align="right" class="lineCount" id="O:145"> 145</td>
+    <td align="right" class="lineCount" id="O:145">  </td>
+    <td class="srcLine" id="O:145">
+        <pre class="srcLine" id="O:145">       count = 0;</pre>
+    </td>
+</tr>
+<tr id="O:146">
+    <td align="right" class="lineCount" id="O:146"> 146</td>
+    <td align="right" class="lineCount" id="O:146">  </td>
+    <td class="srcLine" id="O:146">
+        <pre class="srcLine" id="O:146">    }</pre>
+    </td>
+</tr>
+<tr id="O:147">
+    <td align="right" class="lineCount" id="O:147"> 147</td>
+    <td align="right" class="lineCount" id="O:147">  </td>
+    <td class="srcLine" id="O:147">
+        <pre class="srcLine" id="O:147">    <span class="comment" id="O:147">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:148">
+    <td align="right" class="lineCount" id="O:148"> 148</td>
+    <td align="right" class="lineCount" id="O:148">  </td>
+    <td class="srcLine" id="O:148">
+        <pre class="srcLine" id="O:148"> <span class="comment" id="O:148">    * This method finds if the object exists.</span></pre>
+    </td>
+</tr>
+<tr id="O:149">
+    <td align="right" class="lineCount" id="O:149"> 149</td>
+    <td align="right" class="lineCount" id="O:149">  </td>
+    <td class="srcLine" id="O:149">
+        <pre class="srcLine" id="O:149"> <span class="comment" id="O:149">    * @param obj used for input.</span></pre>
+    </td>
+</tr>
+<tr id="O:150">
+    <td align="right" class="lineCount" id="O:150"> 150</td>
+    <td align="right" class="lineCount" id="O:150">  </td>
+    <td class="srcLine" id="O:150">
+        <pre class="srcLine" id="O:150"> <span class="comment" id="O:150">    * @return false if not an object and returns object if it is.</span></pre>
+    </td>
+</tr>
+<tr id="O:151">
+    <td align="right" class="lineCount" id="O:151"> 151</td>
+    <td align="right" class="lineCount" id="O:151">  </td>
+    <td class="srcLine" id="O:151">
+        <pre class="srcLine" id="O:151"> <span class="comment" id="O:151">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:152">
+    <td align="right" class="lineCount" id="O:152"> 152</td>
+    <td align="right" class="lineCount" id="O:152">  </td>
+    <td class="srcLine" id="O:152">
+        <pre class="srcLine" id="O:152">    public <span class="keyword" id="O:152">boolean</span> equals(<span class="keyword" id="O:152">Object</span> obj) {</pre>
+    </td>
+</tr>
+<tr id="O:153">
+    <td align="right" class="lineCountHilight" id="O:153"> 153</td>
+    <td align="right" class="lineCountHilight" id="O:153">  </td>
+    <td class="srcHilight" id="O:153">
+        <pre class="srcLine" id="O:153"><a title="Not all possibilities for this decision were tested.  Remember that when you have N simple conditions combined, you must test all N+1 possibilities." id="O:153">       <span class="keyword" id="O:153">if</span> (!(obj <span class="keyword" id="O:153">instanceof</span> Dodecahedron)) {</a></pre>
+    </td>
+</tr>
+<tr id="O:154">
+    <td align="right" class="lineCountHilight" id="O:154"> 154</td>
+    <td align="right" class="lineCountHilight" id="O:154">  </td>
+    <td class="srcHilight" id="O:154">
+        <pre class="srcLine" id="O:154"><a title="This line was never executed by your tests." id="O:154">          return <span class="keyword" id="O:154">false</span>;</a></pre>
+    </td>
+</tr>
+<tr id="O:155">
+    <td align="right" class="lineCount" id="O:155"> 155</td>
+    <td align="right" class="lineCount" id="O:155">  </td>
+    <td class="srcLine" id="O:155">
+        <pre class="srcLine" id="O:155">       }</pre>
+    </td>
+</tr>
+<tr id="O:156">
+    <td align="right" class="lineCount" id="O:156"> 156</td>
+    <td align="right" class="lineCount" id="O:156">  </td>
+    <td class="srcLine" id="O:156">
+        <pre class="srcLine" id="O:156">       <span class="keyword" id="O:156">else</span> {</pre>
+    </td>
+</tr>
+<tr id="O:157">
+    <td align="right" class="lineCount" id="O:157"> 157</td>
+    <td align="right" class="lineCount" id="O:157">  </td>
+    <td class="srcLine" id="O:157">
+        <pre class="srcLine" id="O:157">          Dodecahedron d = (Dodecahedron) obj;</pre>
+    </td>
+</tr>
+<tr id="O:158">
+    <td align="right" class="lineCountHilight" id="O:158"> 158</td>
+    <td align="right" class="lineCountHilight" id="O:158">  </td>
+    <td class="srcHilight" id="O:158">
+        <pre class="srcLine" id="O:158"><a title="Not all possibilities for this decision were tested.  Remember that when you have N simple conditions combined, you must test all N+1 possibilities." id="O:158">          return (label.equalsIgnoreCase(d.getLabel())</a></pre>
+    </td>
+</tr>
+<tr id="O:159">
+    <td align="right" class="lineCount" id="O:159"> 159</td>
+    <td align="right" class="lineCount" id="O:159">  </td>
+    <td class="srcLine" id="O:159">
+        <pre class="srcLine" id="O:159">                   &amp;&amp; color.equalsIgnoreCase(d.getColor())</pre>
+    </td>
+</tr>
+<tr id="O:160">
+    <td align="right" class="lineCount" id="O:160"> 160</td>
+    <td align="right" class="lineCount" id="O:160">  </td>
+    <td class="srcLine" id="O:160">
+        <pre class="srcLine" id="O:160">                   &amp;&amp; Math.abs(edge - d.getEdge()) &lt; .000001);</pre>
+    </td>
+</tr>
+<tr id="O:161">
+    <td align="right" class="lineCount" id="O:161"> 161</td>
+    <td align="right" class="lineCount" id="O:161">  </td>
+    <td class="srcLine" id="O:161">
+        <pre class="srcLine" id="O:161">       }</pre>
+    </td>
+</tr>
+<tr id="O:162">
+    <td align="right" class="lineCount" id="O:162"> 162</td>
+    <td align="right" class="lineCount" id="O:162">  </td>
+    <td class="srcLine" id="O:162">
+        <pre class="srcLine" id="O:162">    }</pre>
+    </td>
+</tr>
+<tr id="O:163">
+    <td align="right" class="lineCount" id="O:163"> 163</td>
+    <td align="right" class="lineCount" id="O:163">  </td>
+    <td class="srcLine" id="O:163">
+        <pre class="srcLine" id="O:163">    <span class="comment" id="O:163">/**</span></pre>
+    </td>
+</tr>
+<tr id="O:164">
+    <td align="right" class="lineCount" id="O:164"> 164</td>
+    <td align="right" class="lineCount" id="O:164">  </td>
+    <td class="srcLine" id="O:164">
+        <pre class="srcLine" id="O:164"> <span class="comment" id="O:164">    * Method to check hash code.</span></pre>
+    </td>
+</tr>
+<tr id="O:165">
+    <td align="right" class="lineCount" id="O:165"> 165</td>
+    <td align="right" class="lineCount" id="O:165">  </td>
+    <td class="srcLine" id="O:165">
+        <pre class="srcLine" id="O:165"> <span class="comment" id="O:165">    * @return 0.</span></pre>
+    </td>
+</tr>
+<tr id="O:166">
+    <td align="right" class="lineCount" id="O:166"> 166</td>
+    <td align="right" class="lineCount" id="O:166">  </td>
+    <td class="srcLine" id="O:166">
+        <pre class="srcLine" id="O:166"> <span class="comment" id="O:166">    */</span></pre>
+    </td>
+</tr>
+<tr id="O:167">
+    <td align="right" class="lineCount" id="O:167"> 167</td>
+    <td align="right" class="lineCount" id="O:167">  </td>
+    <td class="srcLine" id="O:167">
+        <pre class="srcLine" id="O:167">    public <span class="keyword" id="O:167">int</span> hashCode() {</pre>
+    </td>
+</tr>
+<tr id="O:168">
+    <td align="right" class="lineCount" id="O:168"> 168</td>
+    <td align="right" class="lineCount" id="O:168">  </td>
+    <td class="srcLine" id="O:168">
+        <pre class="srcLine" id="O:168">       <span class="keyword" id="O:168">return</span> 0;</pre>
+    </td>
+</tr>
+<tr id="O:169">
+    <td align="right" class="lineCount" id="O:169"> 169</td>
+    <td align="right" class="lineCount" id="O:169">  </td>
+    <td class="srcLine" id="O:169">
+        <pre class="srcLine" id="O:169">    }</pre>
+    </td>
+</tr>
+<tr id="O:170">
+    <td align="right" class="lineCount" id="O:170"> 170</td>
+    <td align="right" class="lineCount" id="O:170">  </td>
+    <td class="srcLine" id="O:170">
+        <pre class="srcLine" id="O:170"> }</pre>
+    </td>
+</tr>
+</TBODY></TABLE>
+
+</div>
+
+
+</div>
+
+
+</div></div></div><div id="footer">
+  <div id="width">
+    <span class="floatLeft">
+      <a href="http://web-cat.org/">Web-CAT</a> is
+      &copy; 2006-2017 <a href="http://www.cs.vt.edu/">Virginia Tech</a>
+      <span class="grey">|</span>
+      v1.5.0/2.6.13.20141011
+    </span>
+    <span class="floatRight">
+    Administrator: <a href="mailto:webcat@eng.auburn.edu">webcat@eng.auburn.edu</a>
+    
+    </span>
+  </div>
+</div>
+
+</body>
+</html>
