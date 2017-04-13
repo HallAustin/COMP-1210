@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
  * @author Austin Hall
  * @version 4/6/17
  */
-public abstract class BakedItem {
+public abstract class BakedItem implements Comparable<BakedItem> {
 
    //instance variables
    protected String name = "";
@@ -170,6 +170,47 @@ public abstract class BakedItem {
     */
    public abstract double price();
    
+   public int compareTo(BakedItem item) {
    
+      if (this.getClass().toString().substring(6).compareTo(
+         item.getClass().toString().substring(6)) > 0) {
+         
+         return 1;      
+      }
+      
+      else if (this.getClass().toString().substring(6).toLowerCase()
+            .compareTo(item.getClass().toString().substring(6).toLowerCase()) < 0) {
+         
+         return -1;     
+      }
+      
+      else if (this.getName().toLowerCase().compareTo(
+            item.getName().toLowerCase()) > 0) {
+         
+         return 1;      
+      }
+      
+      else if (this.getName().toLowerCase().compareTo(
+            item.getName().toLowerCase()) < 0) {
+         
+         return -1;      
+      }
+      
+      else if (this.getFlavor().toLowerCase().compareTo(
+            item.getFlavor().toLowerCase()) > 0) {
+         
+         return 1;      
+      }
+      
+      else if (this.getFlavor().toLowerCase().compareTo(
+            item.getFlavor().toLowerCase()) < 0) {
+         
+         return -1;      
+      }
+      
+      else {
+         return 0;
+      }  
+   }
    
 }
